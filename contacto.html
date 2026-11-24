@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciapeco S.A.C. | Contacto</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Leaflet CSS (Mapa Interactivo) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <!-- Estilos Modulares -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+    <meta
+      name="google-site-verification"
+      content="sSvDSMvbuLQjXtVVbVPxJXhGiII7UcwwgLiACmHJwfs"
+    />
+  </head>
+  <body class="bg-white">
+    <!-- NAVBAR MODULAR -->
+    <div id="navbar-container"></div>
+
+    <!-- SECCIÓN PRINCIPAL DE CONTACTO Y MAPA AMPLIADO -->
+    <main class="py-5">
+      <div class="container-fluid px-3 px-lg-5">
+        <!-- Encabezado -->
+        <div class="mb-4">
+          <h1 class="h2 fw-bold text-uppercase mb-2">Contacto y Ubicaciones</h1>
+          <div class="linea-mostaza mb-3"></div>
+          <p class="text-secondary mb-0">
+            Selecciona cualquiera de nuestras sedes o puntos logísticos para
+            ubicarlos en el mapa interactivo, o comunícate directamente con
+            nuestro equipo.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- COLUMNA IZQUIERDA (4 cols): Contacto Directo + Sedes Interactivas -->
+          <div class="col-lg-4">
+            <div
+              class="panel-contacto-dark p-4 rounded shadow h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <!-- Bloque de Correo y LinkedIn -->
+                <h5 class="text-mostaza fw-bold text-uppercase mb-3">
+                  <i class="bi bi-chat-dots-fill me-2"></i>Contacto Directo
+                </h5>
+
+                <div class="canal-directo p-3 rounded mb-4">
+                  <small class="text-secondary d-block mb-1"
+                    >Correo Corporativo</small
+                  >
+                  <div
+                    class="d-flex align-items-center justify-content-between gap-2 flex-wrap"
+                  >
+                    <a
+                      href="mailto:administracion@ciapeco.com"
+                      class="text-white fw-semibold text-decoration-none small"
+                    >
+                      <i class="bi bi-envelope-fill text-mostaza me-1"></i>
+                      administracion@ciapeco.com
+                    </a>
+                    <button
+                      type="button"
+                      id="btnCopiarCorreo"
+                      class="btn btn-sm btn-copiar"
+                      title="Copiar correo"
+                    >
+                      <i class="bi bi-clipboard"></i> Copiar
+                    </button>
+                  </div>
+
+                  <hr class="border-secondary my-3" />
+
+                  <a
+                    href="https://www.linkedin.com/company/ciapeco-sac"
+                    target="_blank"
+                    class="btn btn-mostaza btn-sm w-100"
+                  >
+                    <i class="bi bi-linkedin me-2"></i>Ver perfil en LinkedIn
+                  </a>
+                </div>
+
+                <!-- Lista Interactiva de Sedes (mueven el mapa al hacer clic) -->
+                <h6 class="text-mostaza fw-bold text-uppercase mb-3">
+                  <i class="bi bi-geo-alt-fill me-1"></i>Nuestras Ubicaciones
+                </h6>
+
+                <div class="d-flex flex-column gap-2" id="listaSedes">
+                  <button
+                    type="button"
+                    class="sede-item active"
+                    data-sede="miraflores"
+                  >
+                    <div class="d-flex align-items-start gap-2">
+                      <i class="bi bi-building text-mostaza mt-1"></i>
+                      <div>
+                        <strong class="d-block">Oficina Principal</strong>
+                        <small>Av. Santa Cruz 875, Miraflores, Lima.</small>
+                      </div>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="sede-item"
+                    data-sede="chorrillos"
+                  >
+                    <div class="d-flex align-items-start gap-2">
+                      <i class="bi bi-box-seam text-mostaza mt-1"></i>
+                      <div>
+                        <strong class="d-block"
+                          >Almacén de Acopio - Chorrillos</strong
+                        >
+                        <small>Recepción y control de lotes en Lima.</small>
+                      </div>
+                    </div>
+                  </button>
+
+                  <button type="button" class="sede-item" data-sede="trujillo">
+                    <div class="d-flex align-items-start gap-2">
+                      <i class="bi bi-box-seam text-mostaza mt-1"></i>
+                      <div>
+                        <strong class="d-block"
+                          >Almacén de Acopio - Trujillo</strong
+                        >
+                        <small>Acopio estratégico en la zona norte.</small>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Botón para ver el panorama general en el mapa -->
+              <button
+                type="button"
+                id="btnVerTodas"
+                class="btn btn-outline-warning btn-sm w-100 mt-4 fw-semibold"
+              >
+                <i class="bi bi-map me-1"></i>Ver todas las ubicaciones en el
+                mapa
+              </button>
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA (8 cols): Mapa Interactivo Grande -->
+          <div class="col-lg-8">
+            <div id="mapaInteractivo" class="mapa-interactivo shadow"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER MODULAR -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Leaflet JS (Mapa Interactivo) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Scripts Modulares -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/contacto.js"></script>
+  </body>
+</html>

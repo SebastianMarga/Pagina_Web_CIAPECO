@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciapeco S.A.C. | Inicio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/logo.png" />
+    <!-- Estilos Modulares -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
+    <meta
+      name="google-site-verification"
+      content="sSvDSMvbuLQjXtVVbVPxJXhGiII7UcwwgLiACmHJwfs"
+    />
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+
+    <!-- HERO SECTION CON CARRUSEL DE IMÁGENES (INTACTO) -->
+    <header class="hero-carousel-wrapper">
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <!-- Indicadores inferiores (puntos mostaza) -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <!-- Diapositivas de fondo -->
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="hero-slide-bg slide-1">
+              <span class="slide-watermark"
+                >Envios por el puerto de Chancay</span
+              >
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="hero-slide-bg slide-2">
+              <span class="slide-watermark">Minerales Molidos</span>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="hero-slide-bg slide-3">
+              <span class="slide-watermark">Exportaciones a China</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenido superpuesto (Texto de Exportación Global de Minerales) -->
+        <div class="hero-overlay-content d-flex align-items-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                <h1 class="display-5 fw-bold text-uppercase mb-3">
+                  <span class="text-mostaza">Exportación</span><br />
+                  <span class="text-white">Global de Minerales</span>
+                </h1>
+                <p class="text-light fs-6 mb-4 pe-lg-4 leading-relaxed">
+                  Conectando la riqueza mineral de nuestra tierra con el mundo.
+                  Somos una pequeña empresa peruana pero con un gran compromiso,
+                  especializada en la comercialización y exportación de una gran
+                  variedad de minerales molidos hacia China a través del
+                  estratégico <strong>Puerto de Chancay</strong>.
+                </p>
+                <button id="btnSaberMas" class="btn btn-mostaza">
+                  Saber Más
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flechas de control laterales -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- SECCIÓN ¿QUÉ EXPORTAMOS? (UNIFICADA CON TEXTO + IMAGEN DEBAJO) -->
+    <section id="seccionOferta" class="py-5 bg-white">
+      <div class="container py-3">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 text-center">
+            <!-- Título con línea decorativa mostaza -->
+            <h2 class="fw-bold text-uppercase mb-2">¿Qué exportamos?</h2>
+            <div class="linea-mostaza mx-auto mb-4"></div>
+
+            <!-- Texto descriptivo de minerales auríferos y metales -->
+            <p class="text-secondary fs-5 mb-4 leading-relaxed">
+              En <strong>Ciapeco S.A.C.</strong> nos especializamos en el acopio
+              y exportación de <strong>minerales molidos</strong> de alta ley,
+              los cuales contienen una valiosa composición de distintos metales
+              y otros elementos polimetálicos de gran demanda industrial. Cada
+              lote es cuidadosamente seleccionado en nuestros almacenes de
+              <strong>Chorrillos y Trujillo</strong> para garantizar estándares
+              óptimos de calidad en su embarque directo hacia China a través del
+              <strong>Puerto de Chancay</strong>.
+            </p>
+
+            <!-- Etiquetas de metales destacados -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+              <span class="badge-metal">
+                <i class="bi bi-gem text-mostaza me-1"></i> Minerales molidos
+              </span>
+              <span class="badge-metal">
+                <i class="bi bi-shield-check text-mostaza me-1"></i> Calidad de
+                Exportación
+              </span>
+            </div>
+
+            <!-- Contenedor de Imagen debajo del texto -->
+            <div class="oferta-unica-img-wrapper mt-2">
+              <img
+                src="/img/Lotes.jpeg"
+                alt="Minerales Auríferos Ciapeco"
+                class="img-fluid rounded oferta-unica-img shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <!-- Bootstrap JS y Script Modular -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/inicio.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>
