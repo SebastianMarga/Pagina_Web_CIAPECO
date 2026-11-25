@@ -1,0 +1,168 @@
+/* css/inicio.css */
+
+/* Contenedor principal del Carrusel Hero */
+.hero-carousel-wrapper {
+  position: relative;
+  border-bottom: 3px solid var(--mostaza);
+  background-color: var(--negro-fondo);
+}
+
+/* Fondos de cada slide */
+.hero-slide-bg {
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 25px 40px;
+}
+
+/* Capa oscura superpuesta para que el texto siempre sea legible */
+.hero-slide-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 0.92) 0%,
+    rgba(17, 17, 17, 0.75) 55%,
+    rgba(17, 17, 17, 0.45) 100%
+  );
+  z-index: 1;
+}
+
+/* Fondos diferenciados de ejemplo */
+.slide-1 {
+  background-color: #1c1f24;
+  background-image: radial-gradient(circle at 80% 50%, #3a2e14 0%, #111111 70%);
+  background-image: url("/img/Puerto.jpg");
+}
+
+.slide-2 {
+  background-color: #24211c;
+  background-image: radial-gradient(circle at 80% 50%, #46391b 0%, #141414 70%);
+  background-image: url("/img/bb.jpg");
+}
+
+.slide-3 {
+  background-color: #1a2226;
+  background-image: radial-gradient(circle at 80% 50%, #2c353d 0%, #111111 70%);
+  background-image: url("/img/Logistica-portuaria.jpg");
+}
+
+/* Etiqueta indicadora de qué imagen va en cada slide */
+.slide-watermark {
+  position: relative;
+  z-index: 2;
+  color: var(--mostaza);
+  border: 1px dashed var(--mostaza);
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Posicionamiento del texto fijo sobre el carrusel */
+.hero-overlay-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Reactiva el clic para el botón y textos dentro del overlay */
+.hero-overlay-content .col-lg-7 {
+  pointer-events: auto;
+}
+
+/* Indicadores inferiores en color mostaza */
+.carousel-indicators [data-bs-target] {
+  background-color: var(--mostaza);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
+/* Ajustes de las flechas laterales */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  z-index: 3;
+}
+
+/* ==========================================
+   ESTILOS DE LA SECCIÓN "¿QUÉ EXPORTAMOS?"
+   ========================================== */
+
+/* Línea decorativa debajo del título "¿Qué exportamos?" */
+.linea-mostaza {
+  width: 70px;
+  height: 4px;
+  background-color: var(--mostaza);
+  border-radius: 2px;
+}
+
+/* Etiquetas (chips) de los metales que contiene el mineral */
+.badge-metal {
+  background-color: var(--negro-fondo);
+  color: #ffffff;
+  border: 1px solid var(--mostaza);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Al pasar el mouse (:hover) o presionar (:active): fondo mostaza y letras negras */
+.badge-metal:hover,
+.badge-metal:active {
+  background-color: var(--mostaza);
+  color: var(--negro-fondo);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 160, 23, 0.4);
+}
+
+/* Fuerza a que el ícono interno pase de mostaza a negro al hacer hover/active */
+.badge-metal:hover i,
+.badge-metal:active i {
+  color: var(--negro-fondo) !important;
+  transition: color 0.3s ease;
+}
+
+/* Recuadro placeholder para la imagen debajo del texto */
+.oferta-unica-box {
+  min-height: 320px;
+  font-size: 1.05rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.oferta-unica-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilo listo para cuando pongas tu etiqueta <img> real */
+.oferta-unica-img {
+  width: 80%;
+  max-height: 600px;
+  object-fit: cover;
+  border: 3px solid var(--mostaza);
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+  .hero-slide-bg {
+    min-height: 520px;
+    justify-content: center;
+    padding-bottom: 45px;
+  }
+}
